@@ -1,0 +1,23 @@
+package edu.mod3.taxcalculator;
+import java.util.Scanner;
+
+public class TaxCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your weekly income: ");
+        double income = scanner.nextDouble();
+        double tax;
+
+        if (income < 500) {
+            tax = income * 0.10;
+        } else if (income >= 500 && income < 1500) {
+            tax = income * 0.15;
+        } else if (income >= 1500 && income < 2500) {
+            tax = income * 0.20;
+        } else {
+            tax = income * 0.30;
+        }
+
+        System.out.println("Your weekly tax withholding is: " + tax);
+    }
+}
